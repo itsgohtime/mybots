@@ -24,7 +24,7 @@ class SIMULATION:
             self.robot.SENSE(i)
             self.robot.THINK()
             self.robot.ACT(i)
-            time.sleep(1/120)
+            time.sleep(1/240)
 
     def __del__(self):
         p.disconnect()
