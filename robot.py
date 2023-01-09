@@ -32,6 +32,12 @@ class ROBOT:
 
     def THINK(self):
         self.nn.Update()
-        self.nn.Print()
+
+    def Get_Fitness(self):
+        xCoordinateOfLinkZero = p.getLinkState(self.robotID, 0)[0][0]
+        f = open("fitness.txt", "w")
+        f.write(str(xCoordinateOfLinkZero))
+        f.close()
+
         
 

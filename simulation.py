@@ -9,7 +9,7 @@ from robot import ROBOT
 
 class SIMULATION:
     def __init__(self):
-        self.physicsClient = p.connect(p.GUI)
+        self.physicsClient = p.connect(p.DIRECT)
         self.world = WORLD()
         self.robot = ROBOT()
         p.setAdditionalSearchPath(pybullet_data.getDataPath()) #why is this here and not in world
@@ -28,5 +28,7 @@ class SIMULATION:
 
     def __del__(self):
         p.disconnect()
-        
+
+    def Get_Fitness(self):
+        self.robot.Get_Fitness()
         
