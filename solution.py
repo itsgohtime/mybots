@@ -11,10 +11,11 @@ class SOLUTION:
         self.myID = ID
 
     def Start_Simulation(self, directOrGUI):
-        self.Create_World()
-        self.Generate_Body()
+        if self.myID == 0:
+            self.Create_World()
+            self.Generate_Body()
         self.Generate_Brain()
-        os.system("start /B python3 simulate.py " + directOrGUI + " " + str(self.myID))
+        os.system("start /B python3 simulate.py " + directOrGUI + " " + str(self.myID) + " 2>&1") 
 
     def Wait_For_Simulation_To_End(self):
         fitnessFileName = "fitness"+ str(self.myID) + ".txt"
