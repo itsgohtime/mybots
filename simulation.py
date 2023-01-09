@@ -8,14 +8,14 @@ from world import WORLD
 from robot import ROBOT
 
 class SIMULATION:
-    def __init__(self, directOrGUI):
+    def __init__(self, directOrGUI, solutionID):
         self.directOrGUI = directOrGUI
         if directOrGUI == "DIRECT":
             self.physicsClient = p.connect(p.DIRECT)
         else:
             self.physicsClient = p.connect(p.GUI)
         self.world = WORLD()
-        self.robot = ROBOT()
+        self.robot = ROBOT(solutionID)
         p.setAdditionalSearchPath(pybullet_data.getDataPath()) #why is this here and not in world
         p.setGravity(0,0,-9.8)
         pyrosim.Prepare_To_Simulate(self.robot.robotID)
@@ -34,6 +34,6 @@ class SIMULATION:
     def __del__(self):
         p.disconnect()
 
-    def Get_Fitness(self):
-        self.robot.Get_Fitness()
+    def Get_Fitness(self, solutionID):
+        self.robot.Get_Fitness(solutionID)
         
