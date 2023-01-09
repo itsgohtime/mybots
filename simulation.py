@@ -8,8 +8,12 @@ from world import WORLD
 from robot import ROBOT
 
 class SIMULATION:
-    def __init__(self):
-        self.physicsClient = p.connect(p.DIRECT)
+    def __init__(self, directOrGUI):
+        self.directOrGUI = directOrGUI
+        if directOrGUI == "DIRECT":
+            self.physicsClient = p.connect(p.DIRECT)
+        else:
+            self.physicsClient = p.connect(p.GUI)
         self.world = WORLD()
         self.robot = ROBOT()
         p.setAdditionalSearchPath(pybullet_data.getDataPath()) #why is this here and not in world
@@ -24,7 +28,8 @@ class SIMULATION:
             self.robot.SENSE(i)
             self.robot.THINK()
             self.robot.ACT(i)
-            time.sleep(1/240)
+            if self.directOrGUI == "GUI":
+                time.sleep(1/240)
 
     def __del__(self):
         p.disconnect()

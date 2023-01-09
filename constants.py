@@ -1,1 +1,1 @@
-numberOfGenerations = 10
+numberOfGenerations = 1000
