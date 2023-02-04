@@ -37,12 +37,16 @@ class ROBOT:
     def THINK(self):
         self.nn.Update()
 
-    def Get_Fitness(self,solutionID):
+    def Get_Fitness(self,solutionID, mean_height):
         xPosition = p.getBasePositionAndOrientation(self.robotID)[0][0]
+        xPosition = xPosition + (-1.5 * mean_height)
         f = open("tmp" + solutionID + ".txt", "w")
         f.write(str(xPosition))
         f.close()
         os.system("rename tmp" + solutionID + ".txt fitness" + solutionID + ".txt")
 
+    def Get_Height(self):
+        zPosition = p.getBasePositionAndOrientation(self.robotID)[0][2]
+        return zPosition
         
 

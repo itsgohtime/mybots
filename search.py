@@ -1,7 +1,4 @@
-import os
-from parallelHillClimber import PARALLEL_HILL_CLIMBER
-import time
+from simulatedAnnealing import SIMULATED_ANNEAL
 
-phc = PARALLEL_HILL_CLIMBER()
-phc.Evolve()
-phc.Show_Best()
+sa = SIMULATED_ANNEAL()
+sa.Evolve()

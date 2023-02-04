@@ -3,6 +3,7 @@ import pybullet_data
 import pyrosim.pyrosim as pyrosim
 import time 
 import numpy
+import os
 
 from world import WORLD
 from robot import ROBOT
@@ -21,6 +22,8 @@ class SIMULATION:
         pyrosim.Prepare_To_Simulate(self.robot.robotID)
         self.robot.Prepare_To_Sense()
         self.robot.Prepare_To_Act()
+        self.heights = numpy.zeros(1000)
+        self.box_heights = numpy.zeros(1000)
 
     def RUN(self):
         for i in range(1000):
@@ -29,11 +32,14 @@ class SIMULATION:
             self.robot.THINK()
             self.robot.ACT(i)
             if self.directOrGUI == "GUI":
-                time.sleep(1/240)
+                time.sleep(1/1000)
+            self.heights[i] = self.robot.Get_Height()
+            self.box_heights[i] = self.world.box_height()
 
     def __del__(self):
         p.disconnect()
 
     def Get_Fitness(self, solutionID):
-        self.robot.Get_Fitness(solutionID)
-        
+        mean_height = self.heights.mean()
+        self.robot.Get_Fitness(solutionID, mean_height)
+    
