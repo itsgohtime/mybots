@@ -1,9 +1,9 @@
-<h3> Asn 5 Documentation </h3>
+# Asn 5 Documentation
 
-<h1> How to run </h1>
+### How to run 
 search.py is the main file and can be run to reproduce the results
 
-<h2> What I Did? </h2>
+### What I Did?
 - built a biped
 - added 4 hidden neurons 
 - created multi-objective function using a rank order centroid weights
