@@ -39,7 +39,8 @@ class ROBOT:
 
     def Get_Fitness(self,solutionID, mean_height):
         xPosition = p.getBasePositionAndOrientation(self.robotID)[0][0]
-        xPosition = xPosition + (-1.5 * mean_height)
+        zPosition = p.getBasePositionAndOrientation(self.robotID)[0][2]
+        xPosition = (2* xPosition) +  (-1 * mean_height) + (-3*zPosition)
         f = open("tmp" + solutionID + ".txt", "w")
         f.write(str(xPosition))
         f.close()

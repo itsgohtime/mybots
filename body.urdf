@@ -50,14 +50,14 @@
             </geometry>
         </collision>
     </link>
-    <joint name="LThigh_LShin" type="revolute">
+    <joint name="LThigh_LShank" type="revolute">
        <parent link="LThigh"/>
-       <child  link="LShin"/>
+       <child  link="LShank"/>
        <origin rpy="0 0 0" xyz="0 0 -0.6" />
      <axis xyz="0 1 0"/>
        <limit effort="0.0" lower="-3.14159" upper="3.14159" velocity="0.0"/>
     </joint>
-    <link name="LShin">
+    <link name="LShank">
         <inertial>
             <origin xyz="0 0 -0.35" rpy="0 0 0"/>
             <mass value="1" />
@@ -108,14 +108,14 @@
             </geometry>
         </collision>
     </link>
-    <joint name="RThigh_RShin" type="revolute">
+    <joint name="RThigh_RShank" type="revolute">
        <parent link="RThigh"/>
-       <child  link="RShin"/>
+       <child  link="RShank"/>
        <origin rpy="0 0 0" xyz="0 0 -0.6" />
      <axis xyz="0 1 0"/>
        <limit effort="0.0" lower="-3.14159" upper="3.14159" velocity="0.0"/>
     </joint>
-    <link name="RShin">
+    <link name="RShank">
         <inertial>
             <origin xyz="0 0 -0.35" rpy="0 0 0"/>
             <mass value="1" />

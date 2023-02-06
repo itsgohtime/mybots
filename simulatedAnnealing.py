@@ -31,7 +31,7 @@ class SIMULATED_ANNEAL:
                         self.current = self.next
                 print("\n", self.current.fitness_x)
             self.T -= 1
-            if (self.current.fitness_x < -7.5):
+            if (self.current.fitness_x < -20):
                 self.Show_Best()
         self.Show_Best()
 
