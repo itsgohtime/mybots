@@ -8,7 +8,7 @@
 ### What I Did?
 - Built a biped based on ludobots final project documentation. Dimensions for links and positions of links and joints can be 
 seen in following diagram.
-    - 
+    - this is here
     - Resource for ludobots final project: https://www.reddit.com/r/ludobots/wiki/finalproject/
 - Neural network includes sensors at both arms and shanks with 4 hidden neurons and motor neurons for all 6 joints.
     - Synapses connect each sensor neuron to each hidden neuron
