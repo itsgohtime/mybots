@@ -17,7 +17,8 @@
     - Constants are negative for avg_height and final_height since they are positive values and trying to achieve the most negative
     fitness so the biped moves as far to the left as possible
     - Resource for multi-objective function: https://www.tandfonline.com/doi/full/10.1080/23311916.2018.1502242#:~:text=The%20dominance%20solution%20and%20optimal
-- Replaced optimization method of PHC with simulated annealing using linear reduction rule for annealing schedule
+- Replaced optimization method of PHC with simulated annealing using linear reduction rule for annealing schedule to have a better chance
+of finding the global minimum without getting stuck at a local minimum.
     - Resource for simulated annealing: https://towardsdatascience.com/optimization-techniques-simulated-annealing-d6a4785a1de7
 
 ### Citations
