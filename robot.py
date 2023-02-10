@@ -8,10 +8,10 @@ from pyrosim.neuralNetwork import NEURAL_NETWORK
 import constants as c
 
 class ROBOT:
-    def __init__(self, solutionID):
+    def __init__(self):
         self.robotID = p.loadURDF("body.urdf")
-        self.nn = NEURAL_NETWORK("brain" + solutionID + ".nndf")
-        os.system("del brain" + str(solutionID) + ".nndf")
+        self.nn = NEURAL_NETWORK("brain.nndf")
+        # os.system("del brain.nndf")
 
     def Prepare_To_Sense(self):
         self.sensors = {}
@@ -36,18 +36,4 @@ class ROBOT:
 
     def THINK(self):
         self.nn.Update()
-
-    def Get_Fitness(self,solutionID, mean_height):
-        xPosition = p.getBasePositionAndOrientation(self.robotID)[0][0]
-        zPosition = p.getBasePositionAndOrientation(self.robotID)[0][2]
-        xPosition = (2* xPosition) +  (-1 * mean_height) + (-3*zPosition)
-        f = open("tmp" + solutionID + ".txt", "w")
-        f.write(str(xPosition))
-        f.close()
-        os.system("rename tmp" + solutionID + ".txt fitness" + solutionID + ".txt")
-
-    def Get_Height(self):
-        zPosition = p.getBasePositionAndOrientation(self.robotID)[0][2]
-        return zPosition
-        
 

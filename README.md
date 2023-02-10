@@ -1,27 +1,15 @@
 # Asn 5 Documentation
 
 ### How to run 
-1. Open constants.py to change temperature and number of runs per temperature
-2. Open search.py and run the file to run Asn_5
-3. When simulation is finished, it will prompt if you are ready; any input will cause the final result to be shown. 
+1. Open start.py and run the file to run Asn_6
 
 ### What I Did?
-- Built a biped based on ludobots final project documentation.
-    - Resource for ludobots final project: https://www.reddit.com/r/ludobots/wiki/finalproject/
-- Neural network includes sensors at both arms and shanks with 4 hidden neurons and motor neurons for all 6 joints.
-    - Synapses connect each sensor neuron to each hidden neuron
-    - Synapses connect each hidden neuron to each motor neuron
-- Multi-objective function using a rank order centroid weights {fitness = 2 * dist_traveled +  -1 * avg_height + -3 * final_height}
-    - Fitness function prioritizes biped standing up straight at the end of the simulation while also trying to maximize distance
-    traveled to the left. The biped staying upright for the majority of the simulation is also included in the fitness function. 
-    - Constants are negative for avg_height and final_height since they are positive values and trying to achieve the most negative
-    fitness so the biped moves as far to the left as possible
-    - Resource for multi-objective function: https://www.tandfonline.com/doi/full/10.1080/23311916.2018.1502242#:~:text=The%20dominance%20solution%20and%20optimal
-- Replaced optimization method of PHC with simulated annealing using linear reduction rule for annealing schedule to have a better chance
-of finding the global minimum without getting stuck at a local minimum.
-    - Resource for simulated annealing: https://towardsdatascience.com/optimization-techniques-simulated-annealing-d6a4785a1de7
+-  Created a program that generates a kinematic chain with a:
+    random number (3-8) of
+    randomly shaped links (0.25 - 1 for length, width, and height) with
+    random sensor placement along the chain.
+- Links with and without sensors are colored green and blue, respectively.
+
 
 ### Citations
 - https://www.reddit.com/r/ludobots/wiki/finalproject/
-- https://www.tandfonline.com/doi/full/10.1080/23311916.2018.1502242#:~:text=The%20dominance%20solution%20and%20optimal
-- https://towardsdatascience.com/optimization-techniques-simulated-annealing-d6a4785a1de7
