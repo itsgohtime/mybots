@@ -10,6 +10,7 @@
     - random sensor placement along the chain.
 - Links with and without sensors are colored green and blue, respectively.
 
-
-### Citations
-- https://www.reddit.com/r/ludobots/wiki/finalproject/
+### Citations 
+- This work was built on top of ludobots and pyrosim
+    - https://www.reddit.com/r/ludobots/wiki/finalproject/
+    - https://github.com/jbongard/pyrosim 
