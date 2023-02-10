@@ -5,9 +5,9 @@
 
 ### What I Did?
 -  Created a program that generates a kinematic chain with a:
-    random number (3-8) of
-    randomly shaped links (0.25 - 1 for length, width, and height) with
-    random sensor placement along the chain.
+    - random number (3-8) of
+    - randomly shaped links (0.25 - 1 for length, width, and height) with
+    - random sensor placement along the chain.
 - Links with and without sensors are colored green and blue, respectively.
 
 
