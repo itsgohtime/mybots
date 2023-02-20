@@ -23,6 +23,7 @@
     - Relative joint positions are found using the direction of new link and direction of previous link
 - The main link of the body is from 0.5 to 0.75, the next 2 links are from 0.22 to 0.46, the third link is from 0.14 to 0.3, and the fourth link is from 0.06 to 0.14
     - The decreasing size with each link makes it so that if an arm were to curl back on itself it would not be able to intersect with other arms
+    - As a result, 3D perendicular snakes can be spawned, but a future would be storing the space that the links take up and allow the arms to be longer and check for collisions to decrease chance of spawning a 3D snake.
 
 ![alt text](https://github.com/itsgohtime/mybots/blob/Asn-7/body_diagram.jpg)
 
