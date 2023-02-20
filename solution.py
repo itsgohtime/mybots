@@ -30,7 +30,9 @@ class SOLUTION:
 
     def Generate_Body(self):
         pyrosim.Start_URDF("body.urdf")
-        self.w, self.l, self.h = self.Link_Size(0)
+        self.w = random.random()*0.25 + 0.5
+        self.l = random.random()*0.25 + 0.5
+        self.h = random.random()*0.25 + 0.5
         self.Create_Link(0, 0, 2, self.w, self.l, self.h)
         self.name += 1
         for i in range(6):
