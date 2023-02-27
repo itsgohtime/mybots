@@ -7,7 +7,8 @@ import math
 import constants as c
 
 class SOLUTION:
-    def __init__(self):
+    def __init__(self, ID):
+        self.myID = ID
         self.name = 0
         self.num_of_links = random.randint(5, 8)
         self.dir = numpy.zeros(self.num_of_links-1); self.prev_dir = numpy.zeros(self.num_of_links-1)
@@ -43,19 +44,61 @@ class SOLUTION:
                     w,l,h = self.link_dim[i]
                     self.find_space(i)
         self.sensors = numpy.random.randint(2, size=self.num_of_links)
+        self.joints = numpy.random.randint(3, size = self.num_of_links - 1)
+        numSensorNeurons = sum(self.sensors)
+        numMotorNeurons = self.num_of_links-1
+        self.weights_1 =  numpy.random.rand(numSensorNeurons, c.numHiddenNeurons) * 2 - 1
+        self.weights_2 =  numpy.random.rand(c.numHiddenNeurons, numMotorNeurons) * 2 - 1
         
     def Start_Simulation(self, directOrGUI):
-        self.Create_World()
+        self.name = 0
+        if self.myID == 0:
+            self.Create_World()
         self.Generate_Body()
         self.Generate_Brain()
-        os.system("start /B python3 simulate.py " + directOrGUI) 
+        os.system("start /B python3 simulate.py " + directOrGUI + " " + str(self.myID)) 
+
+    def Wait_For_Simulation_To_End(self):
+        fitnessFileName = "fitness"+ str(self.myID) + ".txt"
+        while not os.path.exists(fitnessFileName):
+            time.sleep(0.01)
+        f = open(fitnessFileName, "r")
+        self.fitness = float(f.read())
+        f.close()
+        os.system("del " + fitnessFileName)
+
+    def Mutate(self):
+        joint = random.randint(0, self.num_of_links-1)
+        for i in range(joint, self.num_of_links-1):
+            if i == 0:
+                self.dir[0] = random.randint(0,5); self.prev_dir[0] = prev_dir(self.dir[0])
+            else:
+                self.dir[i] = random.randint(0,5)
+                parent = int((i-1)/2)
+                if 2*parent+2 == len(self.dir):
+                    while (self.prev_dir[parent] == self.dir[i]):
+                        self.dir[i] = random.randint(0,5)
+                else:
+                    while (self.prev_dir[parent] == self.dir[i] or self.dir[2*parent+1] == self.dir[2*parent+2]):
+                        self.dir[i] = random.randint(0,5)
+                self.prev_dir[i] = prev_dir(self.dir[i])
+        for i in range(joint, self.num_of_links):
+            if self.Check_Link(i):
+                while (self.Check_Link(i)):
+                    self.link_dim[i] = self.Link_Size(i)
+                    w,l,h = self.link_dim[i]
+                    self.find_space(i)
+
+
+    def Set_ID(self, ID):
+        self.myID = ID
 
     def Create_World(self):
         pyrosim.Start_SDF("world.sdf")
         pyrosim.End()
 
     def Generate_Body(self):
-        pyrosim.Start_URDF("body.urdf")
+        pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
         x = 0; y = 0; z = 2
         w,l,h = self.link_dim[0]
         self.Create_Link(x, y, z,  w, l, h)
@@ -110,7 +153,7 @@ class SOLUTION:
         pyrosim.End()
 
     def Generate_Brain(self):
-        pyrosim.Start_NeuralNetwork("brain.nndf")
+        pyrosim.Start_NeuralNetwork("brain" + str(self.myID) + ".nndf")
         count = 0
         for i in range(self.name):
             if (self.sensors[i]):
@@ -129,8 +172,6 @@ class SOLUTION:
                 parent = math.floor((i -2)/2) + 1
                 pyrosim.Send_Motor_Neuron( name = count , jointName = f"{parent}_{i}")
                 count += 1
-        self.weights_1 =  numpy.random.rand(numSensorNeurons, c.numHiddenNeurons) * 2 - 1
-        self.weights_2 =  numpy.random.rand(c.numHiddenNeurons, self.name - 1) * 2 - 1
         for currentRow in range(numSensorNeurons):
             for currentColumn in range(c.numHiddenNeurons):
                 pyrosim.Send_Synapse(
@@ -153,7 +194,7 @@ class SOLUTION:
                  pyrosim.Send_Cube(name=f"{self.name}", pos = [x, y, z], size = [width, length, height], color = "green")
 
     def Create_Joint(self, x, y, z, parent, child):
-        joint = random.randint(0,2)
+        joint = self.joints[child-1]
         match joint:
             case 0:
                 pyrosim.Send_Joint(name = f"{parent}_{child}", parent = f"{parent}", child = f"{child}", 
