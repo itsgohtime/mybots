@@ -4,7 +4,7 @@
 1. Open constants.py to change number of generations and population size
 2. Open search.py and run the file to run Asn_8 for seeds 0, 1, 2, 3, and 4
     - The seeds can be also changed in search.py by changing what the for loop variable num is 
-        - For example, change line 9 to "for num in [1, 2, 3, 4, 5] to have seeds 1, 2, 3, 4, and 5
+        - For example, change line 9 to "for num in [1, 2, 3, 4, 5]" to have seeds 1, 2, 3, 4, and 5
 3. When each simulation is finished, it will prompt if you are ready; any input will cause the final simulation and plot to be shown.
 4. The next seed will run when the plot is closed. 
 
@@ -20,7 +20,6 @@
 - How bodies are formed
     - we did this
 ![alt text](https://github.com/itsgohtime/mybots/blob/Asn-7/body_diagram.jpg)
-
 - How bodies are mutated
 
 ### Brains
