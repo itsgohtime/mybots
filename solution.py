@@ -45,10 +45,13 @@ class SOLUTION:
                     self.find_space(i)
         self.sensors = numpy.random.randint(2, size=self.num_of_links)
         self.joints = numpy.random.randint(3, size = self.num_of_links - 1)
-        numSensorNeurons = sum(self.sensors)
-        numMotorNeurons = self.num_of_links-1
-        self.weights_1 =  numpy.random.rand(numSensorNeurons, c.numHiddenNeurons) * 2 - 1
-        self.weights_2 =  numpy.random.rand(c.numHiddenNeurons, numMotorNeurons) * 2 - 1
+        self.numSensorNeurons = sum(self.sensors)
+        while (self.numSensorNeurons == 0):
+            self.sensors = numpy.random.randint(2, size=self.num_of_links)
+            self.numSensorNeurons = sum(self.sensors)
+        self.numMotorNeurons = self.num_of_links-1
+        self.weights_1 =  numpy.random.rand(self.numSensorNeurons, c.numHiddenNeurons) * 2 - 1
+        self.weights_2 =  numpy.random.rand(c.numHiddenNeurons, self.numMotorNeurons) * 2 - 1
         
     def Start_Simulation(self, directOrGUI):
         self.name = 0
@@ -88,7 +91,15 @@ class SOLUTION:
                     self.link_dim[i] = self.Link_Size(i)
                     w,l,h = self.link_dim[i]
                     self.find_space(i)
-
+        matrix = random.randint(0,1)
+        if (matrix == 0):
+            randomRow = random.randint(0,self.numSensorNeurons - 1)
+            randomColumn = random.randint(0,c.numHiddenNeurons - 1)
+            self.weights_1[randomRow,randomColumn] =  random.random() * 2 - 1
+        else: 
+            randomRow = random.randint(0,c.numHiddenNeurons - 1)
+            randomColumn = random.randint(0,self.numMotorNeurons - 1)
+            self.weights_2[randomRow,randomColumn] =  random.random() * 2 - 1
 
     def Set_ID(self, ID):
         self.myID = ID
@@ -99,6 +110,7 @@ class SOLUTION:
 
     def Generate_Body(self):
         pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
+        # min_z = min(self.space[:,4])
         x = 0; y = 0; z = 2
         w,l,h = self.link_dim[0]
         self.Create_Link(x, y, z,  w, l, h)

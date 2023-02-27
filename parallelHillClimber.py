@@ -3,6 +3,7 @@ import numpy
 import constants as c
 import copy
 import os
+import random
 
 class PARALLEL_HILL_CLIMBER:
     def __init__(self):
@@ -15,7 +16,6 @@ class PARALLEL_HILL_CLIMBER:
             self.parents[i] = SOLUTION(self.nextAvailableID)
             self.nextAvailableID += 1
         self.fitness = numpy.zeros((c.numberOfGenerations, c.populationSize))
-        print(self.fitness)
         self.gen = 0
 
     def Evolve(self):
@@ -53,7 +53,7 @@ class PARALLEL_HILL_CLIMBER:
             self.fitness[self.gen, key] = self.parents[key].fitness
             if self.parents[key].fitness > self.children[key].fitness:
                 self.parents[key] = self.children[key]
-        self.gen += 1
+        self.gen += 1   
 
     def Print(self):
         for key in self.parents:
@@ -65,6 +65,7 @@ class PARALLEL_HILL_CLIMBER:
             if self.parents[key].fitness < lowest_fitness:
                 best_solution = self.parents[key]
                 lowest_fitness = best_solution.fitness
+        inp = input("Are you Ready?")
         print("The best fitness is:", best_solution.fitness)
         best_solution.Start_Simulation("GUI")
         best_solution.Wait_For_Simulation_To_End()
