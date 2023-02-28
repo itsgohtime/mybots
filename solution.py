@@ -10,8 +10,7 @@ class SOLUTION:
     def __init__(self, ID):
         self.myID = ID
         self.name = 0
-        # self.num_of_links = random.randint(5, 8)
-        self.num_of_links = 8
+        self.num_of_links = random.randint(5, 8)
         self.dir = numpy.zeros(self.num_of_links-1); self.prev_dir = numpy.zeros(self.num_of_links-1)
         self.dir[0] = random.randint(0,5); self.prev_dir[0] = prev_dir(self.dir[0])
         for i in range(1, self.num_of_links-1):
