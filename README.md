@@ -21,6 +21,7 @@
     - that can mutate to maximize distance traveled using parallel hill climber
         - fitness = distance_traveled
         - evolved for 200 generations with a population size of 25
+        ![alt text](https://github.com/itsgohtime/mybots/blob/Asn-8/fitness_curves.jpeg)
 
 ### Bodies
 - How bodies are formed
