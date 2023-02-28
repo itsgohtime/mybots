@@ -16,7 +16,7 @@ for num in [0, 1, 2, 3, 4]:
     for i in range(c.numberOfGenerations):
         best_fitness[i] = -min(phc.fitness[i])
     gen = list(range(c.numberOfGenerations))
-    plt.plot(gen, best_fitness)
-    plt.xlabel("Generation"); plt.ylabel("Distance traveled")
-    plt.title(f"Seed {num}")
-    plt.show()
+    plt.plot(gen, best_fitness, label = f"Seed {num}")
+plt.xlabel("Generation"); plt.ylabel("Distance traveled")
+plt.title("Fitness Curves"); plt.legend()
+plt.show()
