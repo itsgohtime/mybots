@@ -1,5 +1,7 @@
 # Asn 9 Documentation
 
+[Getting Started](docs/body.md)
+
 ### How to run 
 1. Open constants.py to change number of generations and population size
 2. Open search.py and run the file to run Asn_8 for seeds 0, 1, 2, 3, and 4
