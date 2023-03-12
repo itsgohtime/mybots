@@ -6,4 +6,4 @@
     - that can mutate to maximize distance traveled using parallel hill climber
         - fitness = distance_traveled
         - evolved for 200 generations with a population size of 25
-        ![alt text](https://github.com/itsgohtime/mybots/final-project/docs/fitness_curves.png)
+        ![alt text](https://github.com/itsgohtime/mybots/blob/final-project/docs/fitness%20curves.png)
