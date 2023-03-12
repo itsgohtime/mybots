@@ -7,7 +7,7 @@ import numpy
 import random
 
 print("\n")
-os.system("del best_robots")
+#os.system("del best_robots")
 for num in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]:
     random.seed(num)
     numpy.random.seed(num)

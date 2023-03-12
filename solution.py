@@ -31,11 +31,11 @@ class SOLUTION:
             self.Create_World()
         self.Generate_Body()
         self.Generate_Brain()
-        if directOrGUI == "GUI":
-            os.system("copy body" + str(self.myID) + ".urdf best_robots")
-            os.rename(f"best_robots/body{self.myID}.urdf", f"best_robots/body{seed}.urdf")
-            os.system("copy brain" + str(self.myID) + ".nndf best_robots")
-            os.rename(f"best_robots/brain{self.myID}.nndf", f"best_robots/brain{seed}.nndf")
+        #if directOrGUI == "GUI":
+        #    os.system("copy body" + str(self.myID) + ".urdf best_robots")
+        #    os.rename(f"best_robots/body{self.myID}.urdf", f"best_robots/body{seed}.urdf")
+        #    os.system("copy brain" + str(self.myID) + ".nndf best_robots")
+        #    os.rename(f"best_robots/brain{self.myID}.nndf", f"best_robots/brain{seed}.nndf")
         os.system("start /B python3 simulate.py " + directOrGUI + " " + str(self.myID)) 
 
     def Wait_For_Simulation_To_End(self):
