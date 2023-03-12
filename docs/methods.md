@@ -1,4 +1,4 @@
-### [Code Base](method_docs/code_base.md)
+# Methods 
 
 ### [What I did](method_docs/what_I_did.md)
 
@@ -7,3 +7,5 @@
 ### [Mutation of Creatures](method_docs/mutation.md)
 
 ### [Selection of Creatures](method_docs/selection.md)
+
+### [Code Base](method_docs/code_base.md)
