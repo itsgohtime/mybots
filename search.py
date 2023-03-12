@@ -6,10 +6,12 @@ import constants as c
 import numpy
 import random
 
-for num in [0, 1, 2, 3, 4]:
+print("\n")
+os.system("del best_robots")
+for num in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]:
     random.seed(num)
     numpy.random.seed(num)
-    phc = PARALLEL_HILL_CLIMBER()
+    phc = PARALLEL_HILL_CLIMBER(num)
     phc.Evolve()
     phc.Show_Best()
     best_fitness = numpy.zeros(c.numberOfGenerations)

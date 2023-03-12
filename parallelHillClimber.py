@@ -6,7 +6,8 @@ import os
 import random
 
 class PARALLEL_HILL_CLIMBER:
-    def __init__(self):
+    def __init__(self, seed):
+        self.seed = seed
         os.system("del brain*.nndf")
         os.system("del body*.urdf")
         os.system("del fitness*.txt")
@@ -43,7 +44,7 @@ class PARALLEL_HILL_CLIMBER:
 
     def Evaluate(self, solutions):
         for i in range(c.populationSize):
-            solutions[i].Start_Simulation("DIRECT")
+            solutions[i].Start_Simulation("DIRECT", self.seed)
 
         for i in range(c.populationSize):
             solutions[i].Wait_For_Simulation_To_End()
@@ -65,7 +66,7 @@ class PARALLEL_HILL_CLIMBER:
             if self.parents[key].fitness < lowest_fitness:
                 best_solution = self.parents[key]
                 lowest_fitness = best_solution.fitness
-        inp = input("Are you Ready?")
+        inp = input("\nAre you Ready?")
         print("The best fitness is:", best_solution.fitness)
-        best_solution.Start_Simulation("GUI")
+        best_solution.Start_Simulation("GUI", self.seed)
         best_solution.Wait_For_Simulation_To_End()
