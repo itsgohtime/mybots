@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Test"
-permalink: /mybots/test
+permalink: /mybots/test/
 ---
 
 test
