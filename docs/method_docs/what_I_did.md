@@ -5,5 +5,5 @@
         - Links with and without sensors are colored green and blue, respectively
     - that can mutate to maximize distance traveled using parallel hill climber
         - fitness = distance_traveled
-        - evolved for 200 generations with a population size of 25
+        - evolved for 500 generations with a population size of 20
         ![alt text](https://github.com/itsgohtime/mybots/blob/final-project/docs/fitness%20curves.png)
