@@ -1,9 +1,9 @@
-### [Code Base](docs/method_docs/code_base.md)
+### [Code Base](method_docs/code_base.md)
 
-### [What I did](docs/method_docs/what_I_did.md)
+### [What I did](method_docs/what_I_did.md)
 
-### [Creation of Creatures](docs/method_docs/creation.md)
+### [Creation of Creatures](method_docs/creation.md)
 
-### [Mutation of Creatures](docs/method_docs/mutation.md)
+### [Mutation of Creatures](method_docs/mutation.md)
 
-### [Selection of Creatures](docs/method_docs/selection.md)
+### [Selection of Creatures](method_docs/selection.md)
