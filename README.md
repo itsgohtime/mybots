@@ -1,5 +1,9 @@
 # Final Project Documentation
 
+placeholder for 10 sec gif
+
+placeholder for 2-min video
+
 ### How to run 
 1. Open constants.py to change number of generations and population size
 2. Open search.py and run the file to run Asn_8 for seeds 0, 1, 2, 3, and 4
@@ -9,9 +13,9 @@
 4. The next seed will run when the plot is closed. 
 
 
-[Methods](docs/methods.md)
+### [Methods](docs/methods.md)
 
-[Results](docs/results.md)
+### [Results](docs/results.md)
 
 ### Citations 
 - This work was built on top of ludobots and pyrosim
