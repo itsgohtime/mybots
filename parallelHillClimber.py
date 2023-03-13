@@ -58,7 +58,8 @@ class PARALLEL_HILL_CLIMBER:
 
     def Print(self):
         for key in self.parents:
-            print('\nComparison of Fitness: \nParent -', self.parents[key].fitness, '\nChild  -', self.children[key].fitness, '\n')
+            #print('\nComparison of Fitness: \nParent -', self.parents[key].fitness, '\nChild  -', self.children[key].fitness, '\n')
+            pass
 
     def Show_Best(self):
         lowest_fitness = 1000
@@ -66,7 +67,7 @@ class PARALLEL_HILL_CLIMBER:
             if self.parents[key].fitness < lowest_fitness:
                 best_solution = self.parents[key]
                 lowest_fitness = best_solution.fitness
-        inp = input("\nAre you Ready?")
+        #inp = input("\nAre you Ready?")
         print("The best fitness is:", best_solution.fitness)
         best_solution.Start_Simulation("GUI", self.seed)
         best_solution.Wait_For_Simulation_To_End()
