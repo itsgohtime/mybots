@@ -1,5 +1,7 @@
 # Results 
 
+The bodies and brains of the best robot from each seed is stored in the file "best_robots" with the number indicating which seed the robot is from. 
+
 ### Seed Data
 <div align="center">
  
