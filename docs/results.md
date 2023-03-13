@@ -1,5 +1,6 @@
 # Results 
 
+<<<<<<< HEAD
 ---
 Seed: 0
 Starting Fitness Average: 0.1
@@ -7,3 +8,29 @@ Final Fitness: 4
 ---
 
  ![alt text](https://github.com/itsgohtime/mybots/blob/final-project/docs/fitness%20curves.png)
+=======
+### Seed Data
+<div align="center">
+ 
+| Seed | Starting Fitness Avg. | Final Fitness |
+| ---: | ---: | ---: |
+| 0 | 0.0 | 4 |
+| 1 | 0.0 | 5 | 
+| 2 | 0.0 | 5 | 
+| 3 | 0.0 | 5 | 
+| 4 | 0.0 | 5 | 
+| 5 | 0.0 | 5 | 
+| 6 | 0.0 | 5 | 
+| 7 | 0.0 | 5 | 
+| 8 | 0.0 | 5 | 
+| 9 | 0.0 | 5 | 
+ 
+</div>
+
+### Fitness Curves
+ ![alt text](https://github.com/itsgohtime/mybots/blob/final-project/docs/fitness%20curves.png)
+
+### Evolution Images
+
+### Discussion
+>>>>>>> 0db07b6e9c9dc1a0ac511c4ab2c8283d9f4e121d
