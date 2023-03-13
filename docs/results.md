@@ -1,14 +1,5 @@
 # Results 
 
-<<<<<<< HEAD
----
-Seed: 0
-Starting Fitness Average: 0.1
-Final Fitness: 4
----
-
- ![alt text](https://github.com/itsgohtime/mybots/blob/final-project/docs/fitness%20curves.png)
-=======
 ### Seed Data
 <div align="center">
  
@@ -33,4 +24,3 @@ Final Fitness: 4
 ### Evolution Images
 
 ### Discussion
->>>>>>> 0db07b6e9c9dc1a0ac511c4ab2c8283d9f4e121d
