@@ -1,6 +1,7 @@
 # Results 
 
 <div align="center">
+ 
 | Seed | Starting Fitness Avg. | Final Fitness |
 | ---: | ---: | ---: |
 | 0 | 0.0 | 4 |
@@ -13,6 +14,7 @@
 | 7 | 0.0 | 5 | 
 | 8 | 0.0 | 5 | 
 | 9 | 0.0 | 5 | 
+ 
 </div>
 
 
