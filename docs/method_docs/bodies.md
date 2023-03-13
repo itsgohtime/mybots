@@ -12,4 +12,9 @@
 - The sizes of the links are checked to ensure they don't collide with previous links
     - If there is a collision, the dimensions are chosen again and this continues until there isn't a collision
 ![alt text](https://github.com/itsgohtime/mybots/blob/final-project/docs/body_diagram.jpg)
-s
+
+<div align=center>
+  
+<img width="810" alt="image" src="https://user-images.githubusercontent.com/61445107/224773841-ca274292-445b-4958-a5b2-a98e55cc56c8.png">
+  
+</div>
