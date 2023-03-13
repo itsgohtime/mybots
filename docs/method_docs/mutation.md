@@ -4,7 +4,9 @@
 ![alt text](https://github.com/itsgohtime/mybots/blob/Asn-8/mutated_body.jpg)
 
 <center>
+  
 <img width="810" alt="image" src="https://user-images.githubusercontent.com/61445107/224773841-ca274292-445b-4958-a5b2-a98e55cc56c8.png">
+  
 </center>
 
 ### Brains
