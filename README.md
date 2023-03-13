@@ -7,8 +7,6 @@ https://user-images.githubusercontent.com/61445107/224604314-f29bb2d0-9237-4693-
 
 [![Watch the video](https://img.youtube.com/vi/N2lWwNe4Q0UA/maxresdefault.jpg)](https://youtu.be/N2lWwNe4Q0U)
 
-
-
 ### How to run 
 1. Open constants.py to change number of generations and population size
 2. Open search.py and run the file to run final_project for seeds 0, 1, 2, 3, 4, 5, 6, 7, 8, and 9
