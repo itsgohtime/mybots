@@ -4,7 +4,7 @@
 <div align="center">
  
 | Seed | Starting Fitness Avg. | Final Fitness |
-| ---: | ---: | ---: |
+| :---: | :---: | :---: |
 | 0 | 0.0 | 4 |
 | 1 | 0.0 | 5 | 
 | 2 | 0.0 | 5 | 
