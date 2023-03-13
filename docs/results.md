@@ -17,5 +17,4 @@
  
 </div>
 
-
  ![alt text](https://github.com/itsgohtime/mybots/blob/final-project/docs/fitness%20curves.png)
