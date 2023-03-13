@@ -2,9 +2,9 @@
 
 ### [What I did](method_docs/what_I_did.md)
 
-### [Creation of Creatures](method_docs/creation.md)
+### [Bodies](method_docs/bodies.md)
 
-### [Mutation of Creatures](method_docs/mutation.md)
+### [Brains](method_docs/brains.md)
 
 ### [Selection of Creatures](method_docs/selection.md)
 
