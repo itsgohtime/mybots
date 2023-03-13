@@ -5,7 +5,7 @@ https://user-images.githubusercontent.com/61445107/224604314-f29bb2d0-9237-4693-
 
 ### 2-minute Video
 
-[![Watch the video](https://img.youtube.com/vi/N2lWwNe4Q0UA/maxresdefault.jpg)](https://youtu.be/N2lWwNe4Q0U)
+[![Watch the video](<img width="806" alt="thumbnail" src="https://user-images.githubusercontent.com/61445107/224827476-1bfbf500-9377-4d22-b7be-7fbb7dac0ef8.png">)](https://youtu.be/N2lWwNe4Q0U)
 
 ### How to run 
 1. Open constants.py to change number of generations and population size
