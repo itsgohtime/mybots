@@ -6,3 +6,5 @@
 - To parallelize the hill climber algorithm, in each generation, there is a set population size and they all perform hill climbing
     - Each family is unknown to each other so the parents do not influence the mutation of each other's children
     - At the end of the set number of generations, the parent with the highest fitness is determined the best creature. 
+   
+ ![phc](https://user-images.githubusercontent.com/61445107/224830058-d01e5217-97b6-47dd-8ad4-61fc701ca1e6.jpeg)
