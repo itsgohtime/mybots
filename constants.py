@@ -5,5 +5,5 @@ numHiddenNeurons = 4
 motorJointRange = math.pi/6
 motorForce = 40
 
-numberOfGenerations = 1
-populationSize = 1
+numberOfGenerations = 250
+populationSize = 25
