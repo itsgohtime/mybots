@@ -3,7 +3,8 @@
 - There are 4 hidden neurons but it can be changed in constants.py
 - Each joint (number of links - 1) is made to be a motor neuron
 - Each sensor neuron is connected to every hidden neuron and every hidden neuron is connected to every motor neuron
-![alt text](https://github.com/itsgohtime/mybots/blob/final-project/docs/brain_diagram.jpg)
+
+![brain](https://user-images.githubusercontent.com/61445107/224828585-c555a3ce-b2c6-4ae6-bde8-f9d7585485af.jpeg)
 
 ### Mutation of Brains
 - A random synapse (arrow in the diagram above) either connecting a sensor neuron to a hidden neuron or a motor neuron is chosen and then the weight is changed within the range of [-1, 1]
