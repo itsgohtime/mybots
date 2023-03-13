@@ -8,4 +8,7 @@
 ### Mutation of Brains
 - A random synapse (arrow in the diagram above) either connecting a sensor neuron to a hidden neuron or a motor neuron is chosen and then the weight is changed within the range of [-1, 1]
 
+<div align=center>
+  
 <img width="718" alt="image" src="https://user-images.githubusercontent.com/61445107/224828153-d2367fc1-aa7b-4959-988d-5e78d1892a80.png">
+</div>
