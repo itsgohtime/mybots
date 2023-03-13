@@ -1,5 +1,6 @@
 # Results 
 
+### Seed Data
 <div align="center">
  
 | Seed | Starting Fitness Avg. | Final Fitness |
@@ -17,4 +18,7 @@
  
 </div>
 
+### Fitness Curves
  ![alt text](https://github.com/itsgohtime/mybots/blob/final-project/docs/fitness%20curves.png)
+
+### Discussion
