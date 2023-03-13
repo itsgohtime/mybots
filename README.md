@@ -1,7 +1,9 @@
 # Final Project Documentation
 
+### 10 Second Gif
 https://user-images.githubusercontent.com/61445107/224604314-f29bb2d0-9237-4693-8a91-d3202ca636aa.mp4
 
+### 2-minute Video
 placeholder for 2-min video
 
 ### How to run 
