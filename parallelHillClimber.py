@@ -66,7 +66,7 @@ class PARALLEL_HILL_CLIMBER:
             if self.parents[key].fitness < lowest_fitness:
                 best_solution = self.parents[key]
                 lowest_fitness = best_solution.fitness
-        #inp = input("\nAre you Ready?")
+        inp = input("\nAre you Ready?")
         print("\n \n The best fitness is:", best_solution.fitness, "\n")
         best_solution.Start_Simulation("GUI", self.seed)
         best_solution.Wait_For_Simulation_To_End()
