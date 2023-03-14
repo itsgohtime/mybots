@@ -6,6 +6,8 @@
     - seventh and eight link join to fourth link
 - The sizes of the links are checked to ensure they don't collide with previous links
     - If there is a collision, the dimensions are chosen again and this continues until there isn't a collision
+- Directions are set between 0 and 6 where 0 = +x, 1 = -x, 2 = +y, 3 = -y, 4 = +z, 5 = -z
+    - The directions for the body diagram below is [4, 0, 2, 3, 5, 1, 0]
 
 <div align=center>
     
@@ -16,7 +18,10 @@
 
 ### Mutation of Bodies
 - A random link excluding the first one is chosen and the direction it attaches to the previous link is changed
+    - For the first diagram below, the direction that link 5 attaches to link 2 changes from 5 to 4, so the subsequent joints of 3_6 and 3_7 change as well
+        - The resulting directions for the body diagram is   [4, 0, 2, 3, 4, 5, 1]
 - Following links's direction are also changed to ensure that there is no overlap and if there is any links that would collide with a previous link then the dimensions are changed
+
 
 <div align=center>
     
