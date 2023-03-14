@@ -23,6 +23,8 @@ The bodies and brains of the best robot from each seed is stored in the file "be
 ### Fitness Curves
  ![alt text](https://github.com/itsgohtime/mybots/blob/final-project/docs/fitness%20curves.png)
 
+### [Seed Evolutions](evolution_images.md)
+
 ### Discussion
 For 8 out of the 10 final bodies, the robot had 5 links; The robots all had similar phenotypes with their body plan resembling a totem pole of three link with the last two remaining links protruding from the three stacked links. The other two links seemed to help balance the robot since as it moved, it would consistently tilt to one direction. The 8 robots all moved using a motion resembling hopping; the one link touching the ground would be the main driver of the hopping motion. The protruding links would sometimes oscillate back and forth, which seemed to slightly tilt the robot, but it still had a net balance in that direction. For example, the robot was moving in the x direction, there may be a link that is oscilatting back and forth in the y direction which caused the robot to sway back and forth in the y direction, but was ultimately stable in the y direction. 
 
