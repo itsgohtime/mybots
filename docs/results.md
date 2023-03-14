@@ -22,7 +22,6 @@ The bodies and brains of the best robot from each seed is stored in the file "be
 
 ### Fitness Curves
  ![alt text](https://github.com/itsgohtime/mybots/blob/final-project/docs/fitness%20curves.png)
-
 ### [Seed Evolutions](evolution_images.md)
 
 ### Discussion
