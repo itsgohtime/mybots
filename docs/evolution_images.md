@@ -1,3 +1,6 @@
+# Seed Evolution Images
+The left image is a random starting robot in the first generation and the right image is the best robot at the end.
+
 ### Seed 0
 <div align=center>
   
